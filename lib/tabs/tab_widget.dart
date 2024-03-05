@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_news_c10_online/category/tab_item.dart';
 import 'package:flutter_app_news_c10_online/model/SourceResponse.dart';
 import 'package:flutter_app_news_c10_online/news/news_widget.dart';
+import 'package:flutter_app_news_c10_online/tabs/tab_item.dart';
 
 class TabWidget extends StatefulWidget {
   List<Source> sourcesList;

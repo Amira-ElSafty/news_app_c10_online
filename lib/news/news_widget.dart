@@ -3,6 +3,7 @@ import 'package:flutter_app_news_c10_online/api/api_manager.dart';
 import 'package:flutter_app_news_c10_online/model/NewsResponse.dart';
 import 'package:flutter_app_news_c10_online/model/SourceResponse.dart';
 import 'package:flutter_app_news_c10_online/my_theme.dart';
+import 'package:flutter_app_news_c10_online/news/new_item.dart';
 
 class NewsWidget extends StatefulWidget {
   Source source ;
@@ -55,7 +56,7 @@ class _NewsWidgetState extends State<NewsWidget> {
           var newsList = snapshot.data?.articles ?? [];
           return ListView.builder(
               itemBuilder: (context,index){
-                return Text(newsList[index].title ?? '');
+                return NewsItem(news: newsList[index]);
               },
             itemCount: newsList.length,
           );
